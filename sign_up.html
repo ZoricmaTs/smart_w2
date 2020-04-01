@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign in</title>
+    <title>sign up</title>
 </head>
 <body>
     <script src="parse.js"></script>
     <script>
-    //    parser_json ('signin.js');
+    //    parse_json ('signin.js');
     </script>
-<input type="file" onchange="readFile(this)">
+<input type="file" onchange="parseFile(this)">
 
 <script>
-function readFile(input) {
+/*function readFile(input) {
   let file = input.files[0];
 
   let reader = new FileReader();
@@ -47,13 +47,11 @@ function readFile(input) {
         fieldStr +=`<label> ${field.label}</label> `; 
        }
        fieldStr +=`<input type = "${field.input.type}" placeholder = "${field.input.placeholder}" ${required}> `; 
-
-
-
-        if (typeof field.input.colors !== 'undefined') {
+       /* if (typeof field.input.colors !== 'undefined') {
             var colorStr = "";
             for (let j = 0; j < colors.length; j++) {
-                fieldStr +=`<input type = "${field.input.colors}" placeholder = "${field.input.placeholder}" ${required}> `; 
+                color = colors[j];
+                colorStr +=`<input type = "${field.input.type}" value="${color}"> `; 
             }
             
         }
@@ -88,7 +86,7 @@ function readFile(input) {
     console.log(reader.error);
   };
 
-}
+}*/
 </script>
 </body>
 </html>
