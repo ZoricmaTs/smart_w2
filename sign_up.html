@@ -47,6 +47,18 @@ function readFile(input) {
         fieldStr +=`<label> ${field.label}</label> `; 
        }
        fieldStr +=`<input type = "${field.input.type}" placeholder = "${field.input.placeholder}" ${required}> `; 
+
+
+
+        if (typeof field.input.colors !== 'undefined') {
+            var colorStr = "";
+            for (let j = 0; j < colors.length; j++) {
+                fieldStr +=`<input type = "${field.input.colors}" placeholder = "${field.input.placeholder}" ${required}> `; 
+            }
+            
+        }
+
+
        //alert(field.label);
     }
     output += fieldStr;
